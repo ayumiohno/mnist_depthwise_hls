@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'DepthwiseConv2d_10_4_4_3_s'
+================================================================
+* Date:           Tue Jul 23 11:39:07 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        MNIST
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.331 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      815|      843|  8.150 us|  8.430 us|  815|  843|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                                                               |                                                                    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                                    Instance                                   |                               Module                               |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_41_2_fu_463                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_41_2                   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_51_6_VITIS_LOOP_52_7_fu_468   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_51_6_VITIS_LOOP_52_7   |       50|       50|   0.500 us|   0.500 us|   50|   50|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_43_3_VITIS_LOOP_44_4_fu_473   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_43_3_VITIS_LOOP_44_4   |       42|       42|   0.420 us|   0.420 us|   42|   42|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_46_5_fu_480                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_46_5                   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_56_8_fu_485                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_56_8                   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_58_9_VITIS_LOOP_59_10_fu_490  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_58_9_VITIS_LOOP_59_10  |       42|       42|   0.420 us|   0.420 us|   42|   42|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_61_11_fu_497                  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_61_11                  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_64_12_fu_502                  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_64_12                  |       84|       84|   0.840 us|   0.840 us|   84|   84|       no|
+        +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+-----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration |  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency  |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+-----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_36_1  |      796|      824|  199 ~ 206|          -|          -|     4|        no|
+        +-------------------+---------+---------+-----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      39|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|    15|    4345|    3603|    -|
+|Memory           |        2|     -|       0|       0|    0|
+|Multiplexer      |        -|     -|       -|     593|    -|
+|Register         |        -|     -|    1203|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        2|    15|    5548|    4235|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|     1|       2|       3|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+----+------+------+-----+
+    |                                    Instance                                   |                               Module                               | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+----+------+------+-----+
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_41_2_fu_463                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_41_2                   |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_43_3_VITIS_LOOP_44_4_fu_473   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_43_3_VITIS_LOOP_44_4   |        0|   0|    16|   142|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_46_5_fu_480                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_46_5                   |        0|   0|     5|    59|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_51_6_VITIS_LOOP_52_7_fu_468   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_51_6_VITIS_LOOP_52_7   |        0|   0|    15|   138|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_56_8_fu_485                   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_56_8                   |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_58_9_VITIS_LOOP_59_10_fu_490  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_58_9_VITIS_LOOP_59_10  |        0|   0|    16|   160|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_61_11_fu_497                  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_61_11                  |        0|   0|     5|    60|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_64_12_fu_502                  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_64_12                  |        0|  15|  4278|  2952|    0|
+    +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                          |                                                                    |        0|  15|  4345|  3603|    0|
+    +-------------------------------------------------------------------------------+--------------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |   Memory   |                         Module                         | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |line_buf_U  |DepthwiseConv2d_10_4_4_3_s_line_buf_RAM_1WNR_AUTO_1R1W  |        2|  0|   0|    0|    96|   32|     1|         3072|
+    +------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total       |                                                        |        2|  0|   0|    0|    96|   32|     1|         3072|
+    +------------+--------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |py_4_fu_562_p2                    |         +|   0|  0|  10|           3|           1|
+    |ap_block_state25_on_subcall_done  |       and|   0|  0|   2|           1|           1|
+    |cmp162_fu_574_p2                  |      icmp|   0|  0|   8|           3|           2|
+    |icmp_ln36_fu_556_p2               |      icmp|   0|  0|   9|           3|           4|
+    |icmp_ln39_fu_568_p2               |      icmp|   0|  0|   8|           3|           1|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  39|          14|          10|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------+-----+-----------+-----+-----------+
+    |        Name       | LUT | Input Size| Bits| Total Bits|
+    +-------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm          |  159|         35|    1|         35|
+    |ap_done            |    9|          2|    1|          2|
+    |depth2_o77_write   |    9|          2|    1|          2|
+    |line_buf_address0  |   49|          9|    7|         63|
+    |line_buf_ce0       |   49|          9|    1|          9|
+    |line_buf_ce1       |    9|          2|    1|          2|
+    |line_buf_d0        |   43|          8|   32|        256|
+    |line_buf_we0       |   43|          8|    1|          8|
+    |point1_o76_read    |   20|          4|    1|          4|
+    |py_fu_122          |    9|          2|    3|          6|
+    |weights_address0   |   97|         19|    6|        114|
+    |weights_address1   |   97|         19|    6|        114|
+    +-------------------+-----+-----------+-----+-----------+
+    |Total              |  593|        119|   61|        615|
+    +-------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                            Name                                            | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                   |  34|   0|   34|          0|
+    |ap_done_reg                                                                                 |   1|   0|    1|          0|
+    |cmp162_reg_965                                                                              |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_41_2_fu_463_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_43_3_VITIS_LOOP_44_4_fu_473_ap_start_reg   |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_46_5_fu_480_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_51_6_VITIS_LOOP_52_7_fu_468_ap_start_reg   |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_56_8_fu_485_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_58_9_VITIS_LOOP_59_10_fu_490_ap_start_reg  |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_61_11_fu_497_ap_start_reg                  |   1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_64_12_fu_502_ap_start_reg                  |   1|   0|    1|          0|
+    |icmp_ln39_reg_961                                                                           |   1|   0|    1|          0|
+    |py_4_reg_956                                                                                |   3|   0|    3|          0|
+    |py_fu_122                                                                                   |   3|   0|    3|          0|
+    |weights_load_100_reg_900                                                                    |  32|   0|   32|          0|
+    |weights_load_101_reg_905                                                                    |  32|   0|   32|          0|
+    |weights_load_102_reg_920                                                                    |  32|   0|   32|          0|
+    |weights_load_103_reg_925                                                                    |  32|   0|   32|          0|
+    |weights_load_104_reg_940                                                                    |  32|   0|   32|          0|
+    |weights_load_105_reg_945                                                                    |  32|   0|   32|          0|
+    |weights_load_71_reg_605                                                                     |  32|   0|   32|          0|
+    |weights_load_72_reg_620                                                                     |  32|   0|   32|          0|
+    |weights_load_73_reg_625                                                                     |  32|   0|   32|          0|
+    |weights_load_74_reg_640                                                                     |  32|   0|   32|          0|
+    |weights_load_75_reg_645                                                                     |  32|   0|   32|          0|
+    |weights_load_76_reg_660                                                                     |  32|   0|   32|          0|
+    |weights_load_77_reg_665                                                                     |  32|   0|   32|          0|
+    |weights_load_78_reg_680                                                                     |  32|   0|   32|          0|
+    |weights_load_79_reg_685                                                                     |  32|   0|   32|          0|
+    |weights_load_80_reg_700                                                                     |  32|   0|   32|          0|
+    |weights_load_81_reg_705                                                                     |  32|   0|   32|          0|
+    |weights_load_82_reg_720                                                                     |  32|   0|   32|          0|
+    |weights_load_83_reg_725                                                                     |  32|   0|   32|          0|
+    |weights_load_84_reg_740                                                                     |  32|   0|   32|          0|
+    |weights_load_85_reg_745                                                                     |  32|   0|   32|          0|
+    |weights_load_86_reg_760                                                                     |  32|   0|   32|          0|
+    |weights_load_87_reg_765                                                                     |  32|   0|   32|          0|
+    |weights_load_88_reg_780                                                                     |  32|   0|   32|          0|
+    |weights_load_89_reg_785                                                                     |  32|   0|   32|          0|
+    |weights_load_90_reg_800                                                                     |  32|   0|   32|          0|
+    |weights_load_91_reg_805                                                                     |  32|   0|   32|          0|
+    |weights_load_92_reg_820                                                                     |  32|   0|   32|          0|
+    |weights_load_93_reg_825                                                                     |  32|   0|   32|          0|
+    |weights_load_94_reg_840                                                                     |  32|   0|   32|          0|
+    |weights_load_95_reg_845                                                                     |  32|   0|   32|          0|
+    |weights_load_96_reg_860                                                                     |  32|   0|   32|          0|
+    |weights_load_97_reg_865                                                                     |  32|   0|   32|          0|
+    |weights_load_98_reg_880                                                                     |  32|   0|   32|          0|
+    |weights_load_99_reg_885                                                                     |  32|   0|   32|          0|
+    |weights_load_reg_600                                                                        |  32|   0|   32|          0|
+    +--------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                       |1203|   0| 1203|          0|
+    +--------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_continue                |   in|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  DepthwiseConv2d<10, 4, 4, 3>|  return value|
+|point1_o76_dout            |   in|   32|     ap_fifo|                    point1_o76|       pointer|
+|point1_o76_num_data_valid  |   in|    2|     ap_fifo|                    point1_o76|       pointer|
+|point1_o76_fifo_cap        |   in|    2|     ap_fifo|                    point1_o76|       pointer|
+|point1_o76_empty_n         |   in|    1|     ap_fifo|                    point1_o76|       pointer|
+|point1_o76_read            |  out|    1|     ap_fifo|                    point1_o76|       pointer|
+|weights_address0           |  out|    6|   ap_memory|                       weights|         array|
+|weights_ce0                |  out|    1|   ap_memory|                       weights|         array|
+|weights_q0                 |   in|   32|   ap_memory|                       weights|         array|
+|weights_address1           |  out|    6|   ap_memory|                       weights|         array|
+|weights_ce1                |  out|    1|   ap_memory|                       weights|         array|
+|weights_q1                 |   in|   32|   ap_memory|                       weights|         array|
+|depth2_o77_din             |  out|   32|     ap_fifo|                    depth2_o77|       pointer|
+|depth2_o77_num_data_valid  |   in|    2|     ap_fifo|                    depth2_o77|       pointer|
+|depth2_o77_fifo_cap        |   in|    2|     ap_fifo|                    depth2_o77|       pointer|
+|depth2_o77_full_n          |   in|    1|     ap_fifo|                    depth2_o77|       pointer|
+|depth2_o77_write           |  out|    1|     ap_fifo|                    depth2_o77|       pointer|
++---------------------------+-----+-----+------------+------------------------------+--------------+
+

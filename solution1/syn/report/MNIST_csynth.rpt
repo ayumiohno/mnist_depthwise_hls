@@ -1,0 +1,273 @@
+
+
+================================================================
+== Vitis HLS Report for 'MNIST'
+================================================================
+* Date:           Tue Jul 23 11:39:14 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        MNIST
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.360 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     1845|     1855|  18.450 us|  18.550 us|  1407|  1417|  dataflow|
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------+---------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                  |                                 |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |             Instance             |              Module             |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------+---------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |LoadWeights_U0                    |LoadWeights                      |      438|      438|   4.380 us|   4.380 us|   438|   438|       no|
+        |LoadInput_U0                      |LoadInput                        |      786|      786|   7.860 us|   7.860 us|   786|   786|       no|
+        |DepthwiseConv2d_28_10_1_3_U0      |DepthwiseConv2d_28_10_1_3_s      |     1406|     1416|  14.060 us|  14.160 us|  1406|  1416|       no|
+        |PointwiseConv2d_10_1_4_U0         |PointwiseConv2d_10_1_4_s         |      414|      414|   4.140 us|   4.140 us|   414|   414|       no|
+        |DepthwiseConv2d_10_4_4_3_U0       |DepthwiseConv2d_10_4_4_3_s       |      815|      843|   8.150 us|   8.430 us|   815|   843|       no|
+        |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |      250|      250|   2.500 us|   2.500 us|   250|   250|       no|
+        |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |      360|      360|   3.600 us|   3.600 us|   360|   360|       no|
+        |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |      171|      171|   1.710 us|   1.710 us|   171|   171|       no|
+        |Loop_VITIS_LOOP_212_1_proc8_U0    |Loop_VITIS_LOOP_212_1_proc8      |       13|       13|   0.130 us|   0.130 us|    13|    13|       no|
+        +----------------------------------+---------------------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      62|    -|
+|FIFO             |        -|     -|    1188|     799|    -|
+|Instance         |        6|    75|   20188|   16326|    0|
+|Memory           |       16|     -|     256|      14|    0|
+|Multiplexer      |        -|     -|       -|     117|    -|
+|Register         |        -|     -|      13|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |       22|    75|   21645|   17318|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |      288|  1248|  234240|  117120|   64|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        7|     6|       9|      14|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+---------------------------------+---------+----+------+------+-----+
+    |             Instance             |              Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------+---------------------------------+---------+----+------+------+-----+
+    |CONTROL_BUS_s_axi_U               |CONTROL_BUS_s_axi                |        0|   0|    36|    40|    0|
+    |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |        2|  10|  3166|  2486|    0|
+    |DepthwiseConv2d_10_4_4_3_U0       |DepthwiseConv2d_10_4_4_3_s       |        2|  15|  5548|  4235|    0|
+    |DepthwiseConv2d_28_10_1_3_U0      |DepthwiseConv2d_28_10_1_3_s      |        2|  15|  2837|  2410|    0|
+    |LoadInput_U0                      |LoadInput                        |        0|   0|    87|   135|    0|
+    |LoadWeights_U0                    |LoadWeights                      |        0|   0|    71|   521|    0|
+    |Loop_VITIS_LOOP_212_1_proc8_U0    |Loop_VITIS_LOOP_212_1_proc8      |        0|   0|    31|    92|    0|
+    |PointwiseConv2d_10_1_4_U0         |PointwiseConv2d_10_1_4_s         |        0|   5|   828|   972|    0|
+    |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |        0|  10|  1791|  1686|    0|
+    |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |        0|  20|  5793|  3749|    0|
+    +----------------------------------+---------------------------------+---------+----+------+------+-----+
+    |Total                             |                                 |        6|  75| 20188| 16326|    0|
+    +----------------------------------+---------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |   Memory   |         Module         | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |depth1_w_U  |depth1_w_RAM_AUTO_1R1W  |        0|  128|  10|    0|     9|   32|     1|          288|
+    |depth2_w_U  |depth2_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|    36|   32|     1|         1152|
+    |depth3_w_U  |depth3_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|   192|   32|     1|         6144|
+    |point1_w_U  |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_U  |point2_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|    48|   32|     1|         1536|
+    |point3_w_U  |point3_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|   120|   32|     1|         3840|
+    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Total       |                        |       16|  256|  14|    0|   409|  192|     6|        13088|
+    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |     Name     | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |depth1_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    |depth2_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    |depth3_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    |input_U       |        0|  99|   0|    -|     2|   32|       64|
+    |pix_dest_V_U  |        0|  99|   0|    -|     8|    6|       48|
+    |pix_id_V_U    |        0|  99|   0|    -|     8|    5|       40|
+    |pix_keep_V_U  |        0|  99|   0|    -|     8|    4|       32|
+    |pix_strb_V_U  |        0|  99|   0|    -|     8|    4|       32|
+    |pix_user_V_U  |        0|  99|   0|    -|     8|    2|       16|
+    |point1_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    |point2_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    |point3_o_U    |        0|  99|   0|    -|     2|   32|       64|
+    +--------------+---------+----+----+-----+------+-----+---------+
+    |Total         |        0|1188|   0|    0|    54|  245|      616|
+    +--------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |              Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |LoadInput_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
+    |LoadInput_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
+    |LoadWeights_U0_ap_continue               |       and|   0|  0|   2|           1|           1|
+    |LoadWeights_U0_ap_start                  |       and|   0|  0|   2|           1|           1|
+    |Loop_VITIS_LOOP_212_1_proc8_U0_ap_start  |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth1_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth2_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_dest_V               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_id_V                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_keep_V               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_strb_V               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_user_V               |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point1_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w                 |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                  |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                            |       and|   0|  0|   2|           1|           1|
+    |ap_sync_LoadInput_U0_ap_ready            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_LoadWeights_U0_ap_ready          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth1_w           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth2_w           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_dest_V         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_id_V           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_keep_V         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_strb_V         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_user_V         |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point1_w           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w           |        or|   0|  0|   2|           1|           1|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                    |          |   0|  0|  62|          31|          31|
+    +-----------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------+----+-----------+-----+-----------+
+    |                 Name                 | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_LoadInput_U0_ap_ready     |   9|          2|    1|          2|
+    |ap_sync_reg_LoadWeights_U0_ap_ready   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth1_w    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth2_w    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_dest_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_id_V    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_keep_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_strb_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_user_V  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point1_w    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w    |   9|          2|    1|          2|
+    +--------------------------------------+----+-----------+-----+-----------+
+    |Total                                 | 117|         26|   13|         26|
+    +--------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+---+----+-----+-----------+
+    |                 Name                 | FF| LUT| Bits| Const Bits|
+    +--------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_LoadInput_U0_ap_ready     |  1|   0|    1|          0|
+    |ap_sync_reg_LoadWeights_U0_ap_ready   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth1_w    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth2_w    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_dest_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_id_V    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_keep_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_strb_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_user_V  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point1_w    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w    |  1|   0|    1|          0|
+    +--------------------------------------+---+----+-----+-----------+
+    |Total                                 | 13|   0|   13|          0|
+    +--------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+----------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++---------------------------+-----+-----+------------+----------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |   in|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_AWREADY  |  out|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_AWADDR   |   in|    4|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_WVALID   |   in|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_WREADY   |  out|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_WDATA    |   in|   32|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_WSTRB    |   in|    4|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_ARVALID  |   in|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_ARREADY  |  out|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_ARADDR   |   in|    4|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_RVALID   |  out|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_RREADY   |   in|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_RDATA    |  out|   32|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_RRESP    |  out|    2|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_BVALID   |  out|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_BREADY   |   in|    1|       s_axi|     CONTROL_BUS|   return void|
+|s_axi_CONTROL_BUS_BRESP    |  out|    2|       s_axi|     CONTROL_BUS|   return void|
+|ap_clk                     |   in|    1|  ap_ctrl_hs|           MNIST|  return value|
+|ap_rst_n                   |   in|    1|  ap_ctrl_hs|           MNIST|  return value|
+|interrupt                  |  out|    1|  ap_ctrl_hs|           MNIST|  return value|
+|istrm_TDATA                |   in|   32|        axis|  istrm_V_data_V|       pointer|
+|istrm_TKEEP                |   in|    4|        axis|  istrm_V_keep_V|       pointer|
+|istrm_TSTRB                |   in|    4|        axis|  istrm_V_strb_V|       pointer|
+|istrm_TUSER                |   in|    2|        axis|  istrm_V_user_V|       pointer|
+|istrm_TLAST                |   in|    1|        axis|  istrm_V_last_V|       pointer|
+|istrm_TID                  |   in|    5|        axis|    istrm_V_id_V|       pointer|
+|istrm_TDEST                |   in|    6|        axis|  istrm_V_dest_V|       pointer|
+|istrm_TVALID               |   in|    1|        axis|  istrm_V_dest_V|       pointer|
+|istrm_TREADY               |  out|    1|        axis|  istrm_V_dest_V|       pointer|
+|wstrm_TDATA                |   in|   32|        axis|  wstrm_V_data_V|       pointer|
+|wstrm_TKEEP                |   in|    4|        axis|  wstrm_V_keep_V|       pointer|
+|wstrm_TSTRB                |   in|    4|        axis|  wstrm_V_strb_V|       pointer|
+|wstrm_TUSER                |   in|    2|        axis|  wstrm_V_user_V|       pointer|
+|wstrm_TLAST                |   in|    1|        axis|  wstrm_V_last_V|       pointer|
+|wstrm_TID                  |   in|    5|        axis|    wstrm_V_id_V|       pointer|
+|wstrm_TDEST                |   in|    6|        axis|  wstrm_V_dest_V|       pointer|
+|wstrm_TVALID               |   in|    1|        axis|  wstrm_V_dest_V|       pointer|
+|wstrm_TREADY               |  out|    1|        axis|  wstrm_V_dest_V|       pointer|
+|ostrm_TDATA                |  out|   32|        axis|  ostrm_V_data_V|       pointer|
+|ostrm_TKEEP                |  out|    4|        axis|  ostrm_V_keep_V|       pointer|
+|ostrm_TSTRB                |  out|    4|        axis|  ostrm_V_strb_V|       pointer|
+|ostrm_TUSER                |  out|    2|        axis|  ostrm_V_user_V|       pointer|
+|ostrm_TLAST                |  out|    1|        axis|  ostrm_V_last_V|       pointer|
+|ostrm_TID                  |  out|    5|        axis|    ostrm_V_id_V|       pointer|
+|ostrm_TDEST                |  out|    6|        axis|  ostrm_V_dest_V|       pointer|
+|ostrm_TVALID               |  out|    1|        axis|  ostrm_V_dest_V|       pointer|
+|ostrm_TREADY               |   in|    1|        axis|  ostrm_V_dest_V|       pointer|
++---------------------------+-----+-----+------------+----------------+--------------+
+
