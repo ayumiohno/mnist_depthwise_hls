@@ -22,48 +22,33 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1406</Best-caseLatency>
-<Average-caseLatency>1416</Average-caseLatency>
-<Worst-caseLatency>1416</Worst-caseLatency>
-<Best-caseRealTimeLatency>14.060 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>14.160 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>14.160 us</Worst-caseRealTimeLatency>
-<Interval-min>1406</Interval-min>
-<Interval-max>1416</Interval-max>
+<Best-caseLatency>1296</Best-caseLatency>
+<Average-caseLatency>1296</Average-caseLatency>
+<Worst-caseLatency>1296</Worst-caseLatency>
+<Best-caseRealTimeLatency>12.960 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>12.960 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>12.960 us</Worst-caseRealTimeLatency>
+<Interval-min>1296</Interval-min>
+<Interval-max>1296</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_36_1>
+<py>
 <TripCount>10</TripCount>
-<Latency>
-<range>
-<min>1400</min>
-<max>1410</max>
-</range>
-</Latency>
-<AbsoluteTimeLatency>
-<range>
-<min>14000</min>
-<max>14100</max>
-</range>
-</AbsoluteTimeLatency>
-<IterationLatency>
-<range>
-<min>140</min>
-<max>141</max>
-</range>
-</IterationLatency>
+<Latency>1290</Latency>
+<AbsoluteTimeLatency>12900</AbsoluteTimeLatency>
+<IterationLatency>129</IterationLatency>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_36_1>
+</py>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<BRAM_18K>2</BRAM_18K>
+<BRAM_18K>0</BRAM_18K>
 <DSP>15</DSP>
-<FF>2837</FF>
-<LUT>2410</LUT>
+<FF>3002</FF>
+<LUT>3083</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

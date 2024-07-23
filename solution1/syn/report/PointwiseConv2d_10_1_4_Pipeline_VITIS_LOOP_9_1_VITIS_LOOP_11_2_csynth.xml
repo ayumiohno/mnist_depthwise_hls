@@ -250,8 +250,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>weights_load_1</name>
-<Object>weights_load_1</Object>
+<name>weights_load_12</name>
+<Object>weights_load_12</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -261,8 +261,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>weights_load_2</name>
-<Object>weights_load_2</Object>
+<name>weights_load_13</name>
+<Object>weights_load_13</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -272,8 +272,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>weights_load_3</name>
-<Object>weights_load_3</Object>
+<name>weights_load_14</name>
+<Object>weights_load_14</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

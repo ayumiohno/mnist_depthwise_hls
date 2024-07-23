@@ -5,18 +5,20 @@ void PointwiseConv2d(
     hls::stream<float> &input, const float* weights, hls::stream<float> &output)
 {
     float out_buf[OUT_CH];
-
+    #pragma HLS ARRAY_PARTITION variable=out_buf complete
     for (int py = 0; py < SIZE; py++)
     {
         for (int px = 0; px < SIZE; px++)
         {
             for (int oc = 0; oc < OUT_CH; oc++)
+                #pragma HLS UNROLL
                 out_buf[oc] = 0.0;
             for (int ic = 0; ic < IN_CH; ic++)
             {
                 float in = input.read();
                 for (int oc = 0; oc < OUT_CH; oc++)
                 {
+                    #pragma HLS UNROLL
                     out_buf[oc] += in * weights[oc * IN_CH + ic];
                 }
             }
@@ -25,50 +27,59 @@ void PointwiseConv2d(
         }
     }
 }
-
 template <int SIZE, int OUT_SIZE, int IN_CH, int KERNEL = 3>
 void DepthwiseConv2d(
     hls::stream<float> &input, const float* weights, hls::stream<float> &output)
 {
     float line_buf[2][SIZE + 2][IN_CH];
     float window_buf[KERNEL][KERNEL][IN_CH];
+    #pragma HLS ARRAY_PARTITION variable=window_buf complete
+    #pragma HLS ARRAY_PARTITION variable=line_buf complete
 
-    for (int py = 0; py < OUT_SIZE; py++)
+    py: for (int py = 0; py < OUT_SIZE; py++)
     {
         // Initialize line buffer[0]
         if (py != 0)
         {
             for (int ic = 0; ic < IN_CH; ic++)
+                #pragma HLS UNROLL
                 line_buf[0][0][ic] = 0.0;
-            for (int px = 1; px < SIZE + 1; px++)
+            line0: for (int px = 1; px < SIZE + 1; px++)
+                #pragma HLS UNROLL
                 for (int ic = 0; ic < IN_CH; ic++)
                     line_buf[0][px][ic] = input.read();
             for (int ic = 0; ic < IN_CH; ic++)
+                #pragma HLS UNROLL
                 line_buf[0][SIZE+1][ic] = 0.0;
         }
         else
         {
             for (int px = 0; px < SIZE + 2; px++)
+                #pragma HLS UNROLL
                 for (int ic = 0; ic < IN_CH; ic++)
                     line_buf[0][px][ic] = 0.0;
         }
         // Initialize line buffer[1]
         for (int ic = 0; ic < IN_CH; ic++)
+            #pragma HLS UNROLL
             line_buf[1][0][ic] = 0.0;
-        for (int px = 1; px < SIZE + 1; px++)
+        line1: for (int px = 1; px < SIZE + 1; px++)
+            #pragma HLS UNROLL
             for (int ic = 0; ic < IN_CH; ic++)
                 line_buf[1][px][ic] = input.read();
         for (int ic = 0; ic < IN_CH; ic++)
+            #pragma HLS UNROLL
             line_buf[1][SIZE+1][ic] = 0.0;
         // Iterate over px
-        for (int px = 0; px < OUT_SIZE; px++)
+        px: for (int px = 0; px < OUT_SIZE; px++)
         {
+			#pragma HLS PIPELINE II=1
             // Set Window Buffer
-            for (int ky = 0; ky < KERNEL - 1; ky++)
+            win1: for (int ky = 0; ky < KERNEL - 1; ky++)
                 for (int kx = 0; kx < KERNEL; kx++)
                     for (int ic = 0; ic < IN_CH; ic++)
                         window_buf[ky][kx][ic] = line_buf[ky][kx + px * KERNEL][ic];
-            for (int kx = 0; kx < KERNEL; kx++)
+            win2: for (int kx = 0; kx < KERNEL; kx++)
                 for (int ic = 0; ic < IN_CH; ic++)
                     if ((px == 0 && kx == 0)
                         || (px == OUT_SIZE - 1 && kx == KERNEL - 1) || (py == OUT_SIZE - 1))
@@ -76,7 +87,7 @@ void DepthwiseConv2d(
                     else
                         window_buf[2][kx][ic] = input.read();
             // Convolution
-            for (int ic = 0; ic < IN_CH; ic++)
+            conv: for (int ic = 0; ic < IN_CH; ic++)
             {
                 float out = 0.0;
                 for (int ky = 0; ky < KERNEL; ky++)
@@ -92,6 +103,7 @@ template <int SIZE = 4, int OUT_SIZE = 1, int IN_CH = 12, int KERNEL = 4>
 void DepthwiseConv2dFinal(hls::stream<float> &input, const float* weights, hls::stream<float> &output)
 {
     float input_buf[SIZE][SIZE][IN_CH];
+    #pragma HLS ARRAY_PARTITION variable=input_buf complete
     for (int py = 0; py < SIZE; py++)
     {
         for (int px = 0; px < SIZE; px++)
@@ -221,4 +233,3 @@ void MNIST(
         }
     }
 }
-
