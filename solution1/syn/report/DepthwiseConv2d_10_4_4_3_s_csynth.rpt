@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'DepthwiseConv2d_10_4_4_3_s'
 ================================================================
-* Date:           Tue Jul 23 13:57:52 2024
+* Date:           Tue Jul 23 22:32:04 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        MNIST
@@ -38,38 +38,38 @@
         |                                                                |                                                     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
         |                            Instance                            |                        Module                       |   min   |   max   |    min    |    max    | min | max |   Type  |
         +----------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_5_fu_651    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_5    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_2_fu_656    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_2    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_22_fu_663   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_22   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_23_fu_670   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_23   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_24_fu_677   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_24   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_25_fu_684   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_25   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_26_fu_691   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_26   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_27_fu_698   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_27   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_28_fu_705   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_28   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_29_fu_712   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_29   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_210_fu_719  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_210  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_511_fu_726  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_511  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_512_fu_731  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_512  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_513_fu_736  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_513  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_514_fu_741  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_514  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_515_fu_746  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_515  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_516_fu_751  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_516  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_517_fu_756  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_517  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_518_fu_761  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_518  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_519_fu_766  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_519  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_520_fu_771  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_520  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_521_fu_776  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_521  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_7_fu_781    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_7    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_722_fu_788  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_722  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_723_fu_795  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_723  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_724_fu_802  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_724  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_725_fu_809  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_725  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_726_fu_816  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_726  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_727_fu_823  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_727  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_728_fu_830  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_728  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_729_fu_837  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_729  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_730_fu_844  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_730  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_5_fu_651    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_5    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_2_fu_656    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_2    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_22_fu_663   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_22   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_23_fu_670   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_23   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_24_fu_677   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_24   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_25_fu_684   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_25   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_26_fu_691   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_26   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_27_fu_698   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_27   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_28_fu_705   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_28   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_29_fu_712   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_29   |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_210_fu_719  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_210  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_511_fu_726  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_511  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_512_fu_731  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_512  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_513_fu_736  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_513  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_514_fu_741  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_514  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_515_fu_746  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_515  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_516_fu_751  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_516  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_517_fu_756  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_517  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_518_fu_761  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_518  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_519_fu_766  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_519  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_520_fu_771  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_520  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_521_fu_776  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_521  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_7_fu_781    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_7    |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_722_fu_788  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_722  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_723_fu_795  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_723  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_724_fu_802  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_724  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_725_fu_809  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_725  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_726_fu_816  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_726  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_727_fu_823  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_727  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_728_fu_830  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_728  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_729_fu_837  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_729  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_730_fu_844  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_730  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
         |grp_DepthwiseConv2d_10_4_4_3_Pipeline_px_fu_851                 |DepthwiseConv2d_10_4_4_3_Pipeline_px                 |       82|       82|   0.820 us|   0.820 us|   82|   82|       no|
         +----------------------------------------------------------------+-----------------------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
 
@@ -110,38 +110,38 @@
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
     |                            Instance                            |                        Module                       | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_2_fu_656    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_2    |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_210_fu_719  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_210  |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_22_fu_663   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_22   |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_23_fu_670   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_23   |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_24_fu_677   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_24   |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_25_fu_684   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_25   |        0|   0|     9|    80|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_26_fu_691   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_26   |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_27_fu_698   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_27   |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_28_fu_705   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_28   |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_29_fu_712   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_29   |        0|   0|     9|    81|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_5_fu_651    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_5    |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_511_fu_726  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_511  |        0|   0|     5|    50|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_512_fu_731  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_512  |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_513_fu_736  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_513  |        0|   0|     5|    50|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_514_fu_741  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_514  |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_515_fu_746  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_515  |        0|   0|     5|    58|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_516_fu_751  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_516  |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_517_fu_756  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_517  |        0|   0|     5|    50|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_518_fu_761  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_518  |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_519_fu_766  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_519  |        0|   0|     5|    59|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_520_fu_771  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_520  |        0|   0|     5|    46|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_521_fu_776  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_521  |        0|   0|     5|    59|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_7_fu_781    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_7    |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_722_fu_788  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_722  |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_723_fu_795  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_723  |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_724_fu_802  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_724  |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_725_fu_809  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_725  |        0|   0|     9|    80|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_726_fu_816  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_726  |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_727_fu_823  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_727  |        0|   0|     9|    72|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_728_fu_830  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_728  |        0|   0|     9|    68|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_729_fu_837  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_729  |        0|   0|     9|    81|    0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_730_fu_844  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_730  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_2_fu_656    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_2    |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_210_fu_719  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_210  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_22_fu_663   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_22   |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_23_fu_670   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_23   |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_24_fu_677   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_24   |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_25_fu_684   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_25   |        0|   0|     9|    80|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_26_fu_691   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_26   |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_27_fu_698   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_27   |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_28_fu_705   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_28   |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_29_fu_712   |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_29   |        0|   0|     9|    81|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_5_fu_651    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_5    |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_511_fu_726  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_511  |        0|   0|     5|    50|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_512_fu_731  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_512  |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_513_fu_736  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_513  |        0|   0|     5|    50|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_514_fu_741  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_514  |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_515_fu_746  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_515  |        0|   0|     5|    58|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_516_fu_751  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_516  |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_517_fu_756  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_517  |        0|   0|     5|    50|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_518_fu_761  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_518  |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_519_fu_766  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_519  |        0|   0|     5|    59|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_520_fu_771  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_520  |        0|   0|     5|    46|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_521_fu_776  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_521  |        0|   0|     5|    59|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_7_fu_781    |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_7    |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_722_fu_788  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_722  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_723_fu_795  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_723  |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_724_fu_802  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_724  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_725_fu_809  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_725  |        0|   0|     9|    80|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_726_fu_816  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_726  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_727_fu_823  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_727  |        0|   0|     9|    72|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_728_fu_830  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_728  |        0|   0|     9|    68|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_729_fu_837  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_729  |        0|   0|     9|    81|    0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_730_fu_844  |DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_730  |        0|   0|     9|    68|    0|
     |grp_DepthwiseConv2d_10_4_4_3_Pipeline_px_fu_851                 |DepthwiseConv2d_10_4_4_3_Pipeline_px                 |        0|  15|  4466|  2717|    0|
     +----------------------------------------------------------------+-----------------------------------------------------+---------+----+------+------+-----+
     |Total                                                           |                                                     |        0|  15|  4706|  4753|    0|
@@ -169,8 +169,8 @@
     +---------------------+----------+----+---+----+------------+------------+
     |py_4_fu_912_p2       |         +|   0|  0|  10|           3|           1|
     |cmp164_fu_924_p2     |      icmp|   0|  0|   8|           3|           2|
-    |icmp_ln39_fu_906_p2  |      icmp|   0|  0|   9|           3|           4|
-    |icmp_ln42_fu_918_p2  |      icmp|   0|  0|   8|           3|           1|
+    |icmp_ln40_fu_906_p2  |      icmp|   0|  0|   9|           3|           4|
+    |icmp_ln43_fu_918_p2  |      icmp|   0|  0|   8|           3|           1|
     |ap_block_state1      |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  37|          13|           9|
@@ -206,77 +206,77 @@
     |ap_CS_fsm                                                                    |  117|   0|  117|          0|
     |ap_done_reg                                                                  |    1|   0|    1|          0|
     |cmp164_reg_1395                                                              |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_210_fu_719_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_22_fu_663_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_23_fu_670_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_24_fu_677_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_25_fu_684_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_26_fu_691_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_27_fu_698_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_28_fu_705_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_29_fu_712_ap_start_reg   |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_49_2_fu_656_ap_start_reg    |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_511_fu_726_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_512_fu_731_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_513_fu_736_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_514_fu_741_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_515_fu_746_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_516_fu_751_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_517_fu_756_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_518_fu_761_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_519_fu_766_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_520_fu_771_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_521_fu_776_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_59_5_fu_651_ap_start_reg    |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_722_fu_788_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_723_fu_795_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_724_fu_802_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_725_fu_809_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_726_fu_816_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_727_fu_823_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_728_fu_830_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_729_fu_837_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_730_fu_844_ap_start_reg  |    1|   0|    1|          0|
-    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_68_7_fu_781_ap_start_reg    |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_210_fu_719_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_22_fu_663_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_23_fu_670_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_24_fu_677_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_25_fu_684_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_26_fu_691_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_27_fu_698_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_28_fu_705_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_29_fu_712_ap_start_reg   |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_50_2_fu_656_ap_start_reg    |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_511_fu_726_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_512_fu_731_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_513_fu_736_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_514_fu_741_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_515_fu_746_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_516_fu_751_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_517_fu_756_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_518_fu_761_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_519_fu_766_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_520_fu_771_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_521_fu_776_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_60_5_fu_651_ap_start_reg    |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_722_fu_788_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_723_fu_795_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_724_fu_802_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_725_fu_809_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_726_fu_816_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_727_fu_823_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_728_fu_830_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_729_fu_837_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_730_fu_844_ap_start_reg  |    1|   0|    1|          0|
+    |grp_DepthwiseConv2d_10_4_4_3_Pipeline_VITIS_LOOP_69_7_fu_781_ap_start_reg    |    1|   0|    1|          0|
     |grp_DepthwiseConv2d_10_4_4_3_Pipeline_px_fu_851_ap_start_reg                 |    1|   0|    1|          0|
-    |icmp_ln42_reg_1391                                                           |    1|   0|    1|          0|
+    |icmp_ln43_reg_1391                                                           |    1|   0|    1|          0|
     |py_4_reg_1386                                                                |    3|   0|    3|          0|
     |py_fu_182                                                                    |    3|   0|    3|          0|
-    |weights_load_32_reg_955                                                      |   32|   0|   32|          0|
-    |weights_load_33_reg_970                                                      |   32|   0|   32|          0|
-    |weights_load_34_reg_975                                                      |   32|   0|   32|          0|
-    |weights_load_35_reg_990                                                      |   32|   0|   32|          0|
-    |weights_load_36_reg_995                                                      |   32|   0|   32|          0|
-    |weights_load_37_reg_1010                                                     |   32|   0|   32|          0|
-    |weights_load_38_reg_1015                                                     |   32|   0|   32|          0|
-    |weights_load_39_reg_1030                                                     |   32|   0|   32|          0|
-    |weights_load_40_reg_1035                                                     |   32|   0|   32|          0|
-    |weights_load_41_reg_1050                                                     |   32|   0|   32|          0|
-    |weights_load_42_reg_1055                                                     |   32|   0|   32|          0|
-    |weights_load_43_reg_1070                                                     |   32|   0|   32|          0|
-    |weights_load_44_reg_1075                                                     |   32|   0|   32|          0|
-    |weights_load_45_reg_1090                                                     |   32|   0|   32|          0|
-    |weights_load_46_reg_1095                                                     |   32|   0|   32|          0|
-    |weights_load_47_reg_1110                                                     |   32|   0|   32|          0|
-    |weights_load_48_reg_1115                                                     |   32|   0|   32|          0|
-    |weights_load_49_reg_1130                                                     |   32|   0|   32|          0|
-    |weights_load_50_reg_1135                                                     |   32|   0|   32|          0|
-    |weights_load_51_reg_1150                                                     |   32|   0|   32|          0|
-    |weights_load_52_reg_1155                                                     |   32|   0|   32|          0|
-    |weights_load_53_reg_1170                                                     |   32|   0|   32|          0|
-    |weights_load_54_reg_1175                                                     |   32|   0|   32|          0|
-    |weights_load_55_reg_1190                                                     |   32|   0|   32|          0|
-    |weights_load_56_reg_1195                                                     |   32|   0|   32|          0|
-    |weights_load_57_reg_1210                                                     |   32|   0|   32|          0|
-    |weights_load_58_reg_1215                                                     |   32|   0|   32|          0|
-    |weights_load_59_reg_1230                                                     |   32|   0|   32|          0|
-    |weights_load_60_reg_1235                                                     |   32|   0|   32|          0|
-    |weights_load_61_reg_1250                                                     |   32|   0|   32|          0|
-    |weights_load_62_reg_1255                                                     |   32|   0|   32|          0|
-    |weights_load_63_reg_1270                                                     |   32|   0|   32|          0|
-    |weights_load_64_reg_1275                                                     |   32|   0|   32|          0|
-    |weights_load_65_reg_1370                                                     |   32|   0|   32|          0|
-    |weights_load_66_reg_1375                                                     |   32|   0|   32|          0|
+    |weights_load_12_reg_955                                                      |   32|   0|   32|          0|
+    |weights_load_13_reg_970                                                      |   32|   0|   32|          0|
+    |weights_load_14_reg_975                                                      |   32|   0|   32|          0|
+    |weights_load_15_reg_990                                                      |   32|   0|   32|          0|
+    |weights_load_16_reg_995                                                      |   32|   0|   32|          0|
+    |weights_load_17_reg_1010                                                     |   32|   0|   32|          0|
+    |weights_load_18_reg_1015                                                     |   32|   0|   32|          0|
+    |weights_load_19_reg_1030                                                     |   32|   0|   32|          0|
+    |weights_load_20_reg_1035                                                     |   32|   0|   32|          0|
+    |weights_load_21_reg_1050                                                     |   32|   0|   32|          0|
+    |weights_load_22_reg_1055                                                     |   32|   0|   32|          0|
+    |weights_load_23_reg_1070                                                     |   32|   0|   32|          0|
+    |weights_load_24_reg_1075                                                     |   32|   0|   32|          0|
+    |weights_load_25_reg_1090                                                     |   32|   0|   32|          0|
+    |weights_load_26_reg_1095                                                     |   32|   0|   32|          0|
+    |weights_load_27_reg_1110                                                     |   32|   0|   32|          0|
+    |weights_load_28_reg_1115                                                     |   32|   0|   32|          0|
+    |weights_load_29_reg_1130                                                     |   32|   0|   32|          0|
+    |weights_load_30_reg_1135                                                     |   32|   0|   32|          0|
+    |weights_load_31_reg_1150                                                     |   32|   0|   32|          0|
+    |weights_load_32_reg_1155                                                     |   32|   0|   32|          0|
+    |weights_load_33_reg_1170                                                     |   32|   0|   32|          0|
+    |weights_load_34_reg_1175                                                     |   32|   0|   32|          0|
+    |weights_load_35_reg_1190                                                     |   32|   0|   32|          0|
+    |weights_load_36_reg_1195                                                     |   32|   0|   32|          0|
+    |weights_load_37_reg_1210                                                     |   32|   0|   32|          0|
+    |weights_load_38_reg_1215                                                     |   32|   0|   32|          0|
+    |weights_load_39_reg_1230                                                     |   32|   0|   32|          0|
+    |weights_load_40_reg_1235                                                     |   32|   0|   32|          0|
+    |weights_load_41_reg_1250                                                     |   32|   0|   32|          0|
+    |weights_load_42_reg_1255                                                     |   32|   0|   32|          0|
+    |weights_load_43_reg_1270                                                     |   32|   0|   32|          0|
+    |weights_load_44_reg_1275                                                     |   32|   0|   32|          0|
+    |weights_load_45_reg_1370                                                     |   32|   0|   32|          0|
+    |weights_load_46_reg_1375                                                     |   32|   0|   32|          0|
     |weights_load_reg_950                                                         |   32|   0|   32|          0|
     +-----------------------------------------------------------------------------+-----+----+-----+-----------+
     |Total                                                                        | 1311|   0| 1311|          0|

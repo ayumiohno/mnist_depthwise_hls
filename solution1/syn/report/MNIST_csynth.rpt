@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'MNIST'
 ================================================================
-* Date:           Tue Jul 23 13:57:59 2024
+* Date:           Tue Jul 23 22:32:12 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        MNIST
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  7.360 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.331 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -43,10 +43,10 @@
         |DepthwiseConv2d_28_10_1_3_U0      |DepthwiseConv2d_28_10_1_3_s      |     1296|     1296|  12.960 us|  12.960 us|  1296|  1296|       no|
         |PointwiseConv2d_10_1_4_U0         |PointwiseConv2d_10_1_4_s         |      414|      414|   4.140 us|   4.140 us|   414|   414|       no|
         |DepthwiseConv2d_10_4_4_3_U0       |DepthwiseConv2d_10_4_4_3_s       |     1127|     1127|  11.270 us|  11.270 us|  1127|  1127|       no|
-        |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |      250|      250|   2.500 us|   2.500 us|   250|   250|       no|
-        |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |      360|      360|   3.600 us|   3.600 us|   360|   360|       no|
-        |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |       85|       85|   0.850 us|   0.850 us|    85|    85|       no|
-        |Loop_VITIS_LOOP_224_1_proc9_U0    |Loop_VITIS_LOOP_224_1_proc9      |       13|       13|   0.130 us|   0.130 us|    13|    13|       no|
+        |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |      642|      642|   6.420 us|   6.420 us|   642|   642|       no|
+        |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |      280|      280|   2.800 us|   2.800 us|   280|   280|       no|
+        |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |       65|       65|   0.650 us|   0.650 us|    65|    65|       no|
+        |Loop_VITIS_LOOP_226_1_proc6_U0    |Loop_VITIS_LOOP_226_1_proc6      |       13|       13|   0.130 us|   0.130 us|    13|    13|       no|
         +----------------------------------+---------------------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
@@ -62,18 +62,18 @@
 |       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
 +-----------------+---------+------+--------+--------+-----+
 |DSP              |        -|     -|       -|       -|    -|
-|Expression       |        -|     -|       0|      62|    -|
+|Expression       |        -|     -|       0|     184|    -|
 |FIFO             |        -|     -|    1188|     799|    -|
-|Instance         |        6|    75|   20992|   19179|    0|
-|Memory           |       16|     -|     256|      14|    0|
-|Multiplexer      |        -|     -|       -|     117|    -|
-|Register         |        -|     -|      13|       -|    -|
+|Instance         |       26|   156|   25179|   26489|    0|
+|Memory           |        4|     -|    4352|     390|    0|
+|Multiplexer      |        -|     -|       -|     378|    -|
+|Register         |        -|     -|      42|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |       22|    75|   22449|   20171|    0|
+|Total            |       30|   156|   30761|   28240|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
-|Utilization (%)  |        7|     6|       9|      17|    0|
+|Utilization (%)  |       10|    12|      13|      24|    0|
 +-----------------+---------+------+--------+--------+-----+
 
 + Detail: 
@@ -82,35 +82,64 @@
     |             Instance             |              Module             | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +----------------------------------+---------------------------------+---------+----+------+------+-----+
     |CONTROL_BUS_s_axi_U               |CONTROL_BUS_s_axi                |        0|   0|    36|    40|    0|
-    |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |        4|  10|  3318|  2511|    0|
+    |DepthwiseConv2dFinal_4_1_12_4_U0  |DepthwiseConv2dFinal_4_1_12_4_s  |       24|  80|  9071|  6817|    0|
     |DepthwiseConv2d_10_4_4_3_U0       |DepthwiseConv2d_10_4_4_3_s       |        2|  15|  6017|  6542|    0|
     |DepthwiseConv2d_28_10_1_3_U0      |DepthwiseConv2d_28_10_1_3_s      |        0|  15|  3002|  3083|    0|
     |LoadInput_U0                      |LoadInput                        |        0|   0|    87|   135|    0|
-    |LoadWeights_U0                    |LoadWeights                      |        0|   0|    71|   521|    0|
-    |Loop_VITIS_LOOP_224_1_proc9_U0    |Loop_VITIS_LOOP_224_1_proc9      |        0|   0|    31|    92|    0|
+    |LoadWeights_U0                    |LoadWeights                      |        0|   0|   111|   712|    0|
+    |Loop_VITIS_LOOP_226_1_proc6_U0    |Loop_VITIS_LOOP_226_1_proc6      |        0|   0|    31|    92|    0|
     |PointwiseConv2d_10_1_4_U0         |PointwiseConv2d_10_1_4_s         |        0|   5|   828|   972|    0|
-    |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |        0|  10|  1809|  1534|    0|
-    |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |        0|  20|  5793|  3749|    0|
+    |PointwiseConv2d_1_12_10_U0        |PointwiseConv2d_1_12_10_s        |        0|  21|  2603|  4201|    0|
+    |PointwiseConv2d_4_4_12_U0         |PointwiseConv2d_4_4_12_s         |        0|  20|  3393|  3895|    0|
     +----------------------------------+---------------------------------+---------+----+------+------+-----+
-    |Total                             |                                 |        6|  75| 20992| 19179|    0|
+    |Total                             |                                 |       26| 156| 25179| 26489|    0|
     +----------------------------------+---------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
 
     * Memory: 
-    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |   Memory   |         Module         | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |depth1_w_U  |depth1_w_RAM_AUTO_1R1W  |        0|  128|  10|    0|     9|   32|     1|          288|
-    |depth2_w_U  |depth2_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|    36|   32|     1|         1152|
-    |depth3_w_U  |depth3_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|   192|   32|     1|         6144|
-    |point1_w_U  |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
-    |point2_w_U  |point2_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|    48|   32|     1|         1536|
-    |point3_w_U  |point3_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|   120|   32|     1|         3840|
-    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |Total       |                        |       16|  256|  14|    0|   409|  192|     6|        13088|
-    +------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    +---------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |     Memory    |         Module         | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |depth1_w_U     |depth1_w_RAM_AUTO_1R1W  |        0|  128|  10|    0|     9|   32|     1|          288|
+    |depth2_w_U     |depth2_w_RAM_AUTO_1R1W  |        4|    0|   0|    0|    36|   32|     1|         1152|
+    |depth3_w_U     |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_1_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_2_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_3_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_4_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_5_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_6_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |depth3_w_7_U   |depth3_w_RAM_AUTO_1R1W  |        0|  128|  24|    0|    24|   32|     1|          768|
+    |point1_w_U     |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_U     |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_1_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_2_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_3_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_4_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_5_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_6_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_7_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_8_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_9_U   |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_10_U  |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_11_U  |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point2_w_12_U  |point1_w_RAM_AUTO_1R1W  |        0|  128|   4|    0|     4|   32|     1|          128|
+    |point3_w_U     |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_1_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_2_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_3_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_4_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_5_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_6_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_7_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_8_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_9_U   |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    |point3_w_10_U  |point3_w_RAM_AUTO_1R1W  |        0|  128|  12|    0|    11|   32|     1|          352|
+    +---------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    |Total          |                        |        4| 4352| 390|    0|   414| 1120|    35|        13248|
+    +---------------+------------------------+---------+-----+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     +--------------+---------+----+----+-----+------+-----+---------+
@@ -133,85 +162,204 @@
     +--------------+---------+----+----+-----+------+-----+---------+
 
     * Expression: 
-    +-----------------------------------------+----------+----+---+----+------------+------------+
-    |              Variable Name              | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------------------------+----------+----+---+----+------------+------------+
-    |LoadInput_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
-    |LoadInput_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
-    |LoadWeights_U0_ap_continue               |       and|   0|  0|   2|           1|           1|
-    |LoadWeights_U0_ap_start                  |       and|   0|  0|   2|           1|           1|
-    |Loop_VITIS_LOOP_224_1_proc9_U0_ap_start  |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_depth1_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_depth2_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_depth3_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_pix_dest_V               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_pix_id_V                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_pix_keep_V               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_pix_strb_V               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_pix_user_V               |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_point1_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_point2_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_channel_done_point3_w                 |       and|   0|  0|   2|           1|           1|
-    |ap_idle                                  |       and|   0|  0|   2|           1|           1|
-    |ap_sync_ready                            |       and|   0|  0|   2|           1|           1|
-    |ap_sync_LoadInput_U0_ap_ready            |        or|   0|  0|   2|           1|           1|
-    |ap_sync_LoadWeights_U0_ap_ready          |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_depth1_w           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_depth2_w           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_depth3_w           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_pix_dest_V         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_pix_id_V           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_pix_keep_V         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_pix_strb_V         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_pix_user_V         |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_point1_w           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_point2_w           |        or|   0|  0|   2|           1|           1|
-    |ap_sync_channel_write_point3_w           |        or|   0|  0|   2|           1|           1|
-    +-----------------------------------------+----------+----+---+----+------------+------------+
-    |Total                                    |          |   0|  0|  62|          31|          31|
-    +-----------------------------------------+----------+----+---+----+------------+------------+
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |DepthwiseConv2dFinal_4_1_12_4_U0_ap_start  |       and|   0|  0|   2|           1|           1|
+    |LoadInput_U0_ap_continue                   |       and|   0|  0|   2|           1|           1|
+    |LoadInput_U0_ap_start                      |       and|   0|  0|   2|           1|           1|
+    |LoadWeights_U0_ap_continue                 |       and|   0|  0|   2|           1|           1|
+    |LoadWeights_U0_ap_start                    |       and|   0|  0|   2|           1|           1|
+    |Loop_VITIS_LOOP_226_1_proc6_U0_ap_start    |       and|   0|  0|   2|           1|           1|
+    |PointwiseConv2d_1_12_10_U0_ap_start        |       and|   0|  0|   2|           1|           1|
+    |PointwiseConv2d_4_4_12_U0_ap_start         |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth1_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth2_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_1                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_2                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_3                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_4                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_5                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_6                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_depth3_w_7                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_dest_V                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_id_V                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_keep_V                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_strb_V                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_pix_user_V                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point1_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_1                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_10                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_11                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_12                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_2                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_3                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_4                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_5                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_6                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_7                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_8                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point2_w_9                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w                   |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_1                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_10                |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_2                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_3                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_4                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_5                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_6                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_7                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_8                 |       and|   0|  0|   2|           1|           1|
+    |ap_channel_done_point3_w_9                 |       and|   0|  0|   2|           1|           1|
+    |ap_idle                                    |       and|   0|  0|   2|           1|           1|
+    |ap_sync_ready                              |       and|   0|  0|   2|           1|           1|
+    |ap_sync_LoadInput_U0_ap_ready              |        or|   0|  0|   2|           1|           1|
+    |ap_sync_LoadWeights_U0_ap_ready            |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth1_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth2_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_1           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_2           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_3           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_4           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_5           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_6           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_depth3_w_7           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_dest_V           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_id_V             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_keep_V           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_strb_V           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_pix_user_V           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point1_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_1           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_10          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_11          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_12          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_2           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_3           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_4           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_5           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_6           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_7           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_8           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point2_w_9           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w             |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_1           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_10          |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_2           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_3           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_4           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_5           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_6           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_7           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_8           |        or|   0|  0|   2|           1|           1|
+    |ap_sync_channel_write_point3_w_9           |        or|   0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                      |          |   0|  0| 184|          92|          92|
+    +-------------------------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
-    +--------------------------------------+----+-----------+-----+-----------+
-    |                 Name                 | LUT| Input Size| Bits| Total Bits|
-    +--------------------------------------+----+-----------+-----+-----------+
-    |ap_sync_reg_LoadInput_U0_ap_ready     |   9|          2|    1|          2|
-    |ap_sync_reg_LoadWeights_U0_ap_ready   |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_depth1_w    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_depth2_w    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_depth3_w    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_pix_dest_V  |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_pix_id_V    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_pix_keep_V  |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_pix_strb_V  |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_pix_user_V  |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_point1_w    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_point2_w    |   9|          2|    1|          2|
-    |ap_sync_reg_channel_write_point3_w    |   9|          2|    1|          2|
-    +--------------------------------------+----+-----------+-----+-----------+
-    |Total                                 | 117|         26|   13|         26|
-    +--------------------------------------+----+-----------+-----+-----------+
+    +---------------------------------------+----+-----------+-----+-----------+
+    |                  Name                 | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_LoadInput_U0_ap_ready      |   9|          2|    1|          2|
+    |ap_sync_reg_LoadWeights_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth1_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth2_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_1   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_2   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_3   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_4   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_5   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_6   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_depth3_w_7   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_dest_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_id_V     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_keep_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_strb_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_pix_user_V   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point1_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_1   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_10  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_11  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_12  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_2   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_3   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_4   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_5   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_6   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_7   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_8   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point2_w_9   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w     |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_1   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_10  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_2   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_3   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_4   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_5   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_6   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_7   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_8   |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_point3_w_9   |   9|          2|    1|          2|
+    +---------------------------------------+----+-----------+-----+-----------+
+    |Total                                  | 378|         84|   42|         84|
+    +---------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------------+---+----+-----+-----------+
-    |                 Name                 | FF| LUT| Bits| Const Bits|
-    +--------------------------------------+---+----+-----+-----------+
-    |ap_sync_reg_LoadInput_U0_ap_ready     |  1|   0|    1|          0|
-    |ap_sync_reg_LoadWeights_U0_ap_ready   |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_depth1_w    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_depth2_w    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_depth3_w    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_pix_dest_V  |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_pix_id_V    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_pix_keep_V  |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_pix_strb_V  |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_pix_user_V  |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_point1_w    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_point2_w    |  1|   0|    1|          0|
-    |ap_sync_reg_channel_write_point3_w    |  1|   0|    1|          0|
-    +--------------------------------------+---+----+-----+-----------+
-    |Total                                 | 13|   0|   13|          0|
-    +--------------------------------------+---+----+-----+-----------+
+    +---------------------------------------+---+----+-----+-----------+
+    |                  Name                 | FF| LUT| Bits| Const Bits|
+    +---------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_LoadInput_U0_ap_ready      |  1|   0|    1|          0|
+    |ap_sync_reg_LoadWeights_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth1_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth2_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_1   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_2   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_3   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_4   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_5   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_6   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_depth3_w_7   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_dest_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_id_V     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_keep_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_strb_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_pix_user_V   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point1_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_1   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_10  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_11  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_12  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_2   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_3   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_4   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_5   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_6   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_7   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_8   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point2_w_9   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w     |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_1   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_10  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_2   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_3   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_4   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_5   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_6   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_7   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_8   |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_point3_w_9   |  1|   0|    1|          0|
+    +---------------------------------------+---+----+-----+-----------+
+    |Total                                  | 42|   0|   42|          0|
+    +---------------------------------------+---+----+-----+-----------+
 
 
 

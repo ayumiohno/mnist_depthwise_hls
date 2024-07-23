@@ -6,19 +6,19 @@ void PointwiseConv2d(
 {
     float out_buf[OUT_CH];
     #pragma HLS ARRAY_PARTITION variable=out_buf complete
-    for (int py = 0; py < SIZE; py++)
+    py: for (int py = 0; py < SIZE; py++)
     {
-        for (int px = 0; px < SIZE; px++)
+        px: for (int px = 0; px < SIZE; px++)
         {
             for (int oc = 0; oc < OUT_CH; oc++)
-                #pragma HLS UNROLL
+				#pragma HLS UNROLL
                 out_buf[oc] = 0.0;
-            for (int ic = 0; ic < IN_CH; ic++)
+            ic: for (int ic = 0; ic < IN_CH; ic++)
             {
+				#pragma HLS PIPELINE II=1
                 float in = input.read();
-                for (int oc = 0; oc < OUT_CH; oc++)
+                oc: for (int oc = 0; oc < OUT_CH; oc++)
                 {
-                    #pragma HLS UNROLL
                     out_buf[oc] += in * weights[oc * IN_CH + ic];
                 }
             }
@@ -27,6 +27,7 @@ void PointwiseConv2d(
         }
     }
 }
+
 template <int SIZE, int OUT_SIZE, int IN_CH, int KERNEL = 3>
 void DepthwiseConv2d(
     hls::stream<float> &input, const float* weights, hls::stream<float> &output)
@@ -104,7 +105,7 @@ void DepthwiseConv2dFinal(hls::stream<float> &input, const float* weights, hls::
 {
     float input_buf[SIZE][SIZE][IN_CH];
     #pragma HLS ARRAY_PARTITION variable=input_buf complete
-    for (int py = 0; py < SIZE; py++)
+    ld: for (int py = 0; py < SIZE; py++)
     {
         for (int px = 0; px < SIZE; px++)
         {
@@ -114,12 +115,13 @@ void DepthwiseConv2dFinal(hls::stream<float> &input, const float* weights, hls::
             }
         }
     }
-    for (int ic = 0; ic < IN_CH; ic++)
+    conv: for (int ic = 0; ic < IN_CH; ic++)
     {
+        #pragma HLS PIPELINE II=1
         float out = 0.0;
-        for (int ky = 0; ky < KERNEL; ky++)
+        ky: for (int ky = 0; ky < KERNEL; ky++)
         {
-            for (int kx = 0; kx < KERNEL; kx++)
+            kx: for (int kx = 0; kx < KERNEL; kx++)
             {
                 out += input_buf[ky][kx][ic] * weights[ic * KERNEL * KERNEL + ky * KERNEL + kx];
             }

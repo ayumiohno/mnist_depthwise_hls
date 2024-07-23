@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'LoadWeights'
 ================================================================
-* Date:           Tue Jul 23 13:57:37 2024
+* Date:           Tue Jul 23 22:31:49 2024
 
 * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
 * Project:        MNIST
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  2.086 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  2.377 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -38,12 +38,12 @@
         |                                                  |                                       |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
         |                     Instance                     |                 Module                |   min   |   max   |    min    |    max    | min | max |   Type  |
         +--------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_136_1_fu_54   |LoadWeights_Pipeline_VITIS_LOOP_136_1  |       11|       11|   0.110 us|   0.110 us|   11|   11|       no|
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_142_2_fu_74   |LoadWeights_Pipeline_VITIS_LOOP_142_2  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_148_3_fu_94   |LoadWeights_Pipeline_VITIS_LOOP_148_3  |       38|       38|   0.380 us|   0.380 us|   38|   38|       no|
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_154_4_fu_114  |LoadWeights_Pipeline_VITIS_LOOP_154_4  |       50|       50|   0.500 us|   0.500 us|   50|   50|       no|
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_160_5_fu_134  |LoadWeights_Pipeline_VITIS_LOOP_160_5  |      194|      194|   1.940 us|   1.940 us|  194|  194|       no|
-        |grp_LoadWeights_Pipeline_VITIS_LOOP_166_6_fu_154  |LoadWeights_Pipeline_VITIS_LOOP_166_6  |      122|      122|   1.220 us|   1.220 us|  122|  122|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_138_1_fu_112  |LoadWeights_Pipeline_VITIS_LOOP_138_1  |       11|       11|   0.110 us|   0.110 us|   11|   11|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_144_2_fu_132  |LoadWeights_Pipeline_VITIS_LOOP_144_2  |        6|        6|  60.000 ns|  60.000 ns|    6|    6|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_150_3_fu_152  |LoadWeights_Pipeline_VITIS_LOOP_150_3  |       38|       38|   0.380 us|   0.380 us|   38|   38|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_156_4_fu_172  |LoadWeights_Pipeline_VITIS_LOOP_156_4  |       50|       50|   0.500 us|   0.500 us|   50|   50|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_162_5_fu_216  |LoadWeights_Pipeline_VITIS_LOOP_162_5  |      194|      194|   1.940 us|   1.940 us|  194|  194|       no|
+        |grp_LoadWeights_Pipeline_VITIS_LOOP_168_6_fu_250  |LoadWeights_Pipeline_VITIS_LOOP_168_6  |      122|      122|   1.220 us|   1.220 us|  122|  122|       no|
         +--------------------------------------------------+---------------------------------------+---------+---------+-----------+-----------+-----+-----+---------+
 
         * Loop: 
@@ -61,12 +61,12 @@
 |DSP              |        -|     -|       -|       -|    -|
 |Expression       |        -|     -|       0|       2|    -|
 |FIFO             |        -|     -|       -|       -|    -|
-|Instance         |        -|     -|      46|     376|    -|
+|Instance         |        -|     -|      86|     567|    -|
 |Memory           |        -|     -|       -|       -|    -|
 |Multiplexer      |        -|     -|       -|     143|    -|
 |Register         |        -|     -|      25|       -|    -|
 +-----------------+---------+------+--------+--------+-----+
-|Total            |        0|     0|      71|     521|    0|
+|Total            |        0|     0|     111|     712|    0|
 +-----------------+---------+------+--------+--------+-----+
 |Available        |      288|  1248|  234240|  117120|   64|
 +-----------------+---------+------+--------+--------+-----+
@@ -75,18 +75,18 @@
 
 + Detail: 
     * Instance: 
-    +--------------------------------------------------+---------------------------------------+---------+----+----+----+-----+
-    |                     Instance                     |                 Module                | BRAM_18K| DSP| FF | LUT| URAM|
-    +--------------------------------------------------+---------------------------------------+---------+----+----+----+-----+
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_136_1_fu_54   |LoadWeights_Pipeline_VITIS_LOOP_136_1  |        0|   0|   6|  61|    0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_142_2_fu_74   |LoadWeights_Pipeline_VITIS_LOOP_142_2  |        0|   0|   5|  59|    0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_148_3_fu_94   |LoadWeights_Pipeline_VITIS_LOOP_148_3  |        0|   0|   8|  63|    0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_154_4_fu_114  |LoadWeights_Pipeline_VITIS_LOOP_154_4  |        0|   0|   8|  63|    0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_160_5_fu_134  |LoadWeights_Pipeline_VITIS_LOOP_160_5  |        0|   0|  10|  66|    0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_166_6_fu_154  |LoadWeights_Pipeline_VITIS_LOOP_166_6  |        0|   0|   9|  64|    0|
-    +--------------------------------------------------+---------------------------------------+---------+----+----+----+-----+
-    |Total                                             |                                       |        0|   0|  46| 376|    0|
-    +--------------------------------------------------+---------------------------------------+---------+----+----+----+-----+
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |                     Instance                     |                 Module                | BRAM_18K| DSP| FF | LUT | URAM|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_138_1_fu_112  |LoadWeights_Pipeline_VITIS_LOOP_138_1  |        0|   0|   6|   61|    0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_144_2_fu_132  |LoadWeights_Pipeline_VITIS_LOOP_144_2  |        0|   0|   5|   59|    0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_150_3_fu_152  |LoadWeights_Pipeline_VITIS_LOOP_150_3  |        0|   0|   8|   63|    0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_156_4_fu_172  |LoadWeights_Pipeline_VITIS_LOOP_156_4  |        0|   0|  26|  156|    0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_162_5_fu_216  |LoadWeights_Pipeline_VITIS_LOOP_162_5  |        0|   0|  10|   66|    0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_168_6_fu_250  |LoadWeights_Pipeline_VITIS_LOOP_168_6  |        0|   0|  31|  162|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |Total                                             |                                       |        0|   0|  86|  567|    0|
+    +--------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
 
     * DSP: 
     N/A
@@ -123,12 +123,12 @@
     +---------------------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                                      |  18|   0|   18|          0|
     |ap_done_reg                                                    |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_136_1_fu_54_ap_start_reg   |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_142_2_fu_74_ap_start_reg   |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_148_3_fu_94_ap_start_reg   |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_154_4_fu_114_ap_start_reg  |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_160_5_fu_134_ap_start_reg  |   1|   0|    1|          0|
-    |grp_LoadWeights_Pipeline_VITIS_LOOP_166_6_fu_154_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_138_1_fu_112_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_144_2_fu_132_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_150_3_fu_152_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_156_4_fu_172_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_162_5_fu_216_ap_start_reg  |   1|   0|    1|          0|
+    |grp_LoadWeights_Pipeline_VITIS_LOOP_168_6_fu_250_ap_start_reg  |   1|   0|    1|          0|
     +---------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                          |  25|   0|   25|          0|
     +---------------------------------------------------------------+----+----+-----+-----------+
@@ -139,48 +139,164 @@
 == Interface
 ================================================================
 * Summary: 
-+-----------------+-----+-----+------------+----------------+--------------+
-|    RTL Ports    | Dir | Bits|  Protocol  |  Source Object |    C Type    |
-+-----------------+-----+-----+------------+----------------+--------------+
-|ap_clk           |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_rst           |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_start         |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_done          |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_continue      |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_idle          |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|ap_ready         |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
-|wstrm_TDATA      |   in|   32|        axis|  wstrm_V_data_V|       pointer|
-|wstrm_TVALID     |   in|    1|        axis|  wstrm_V_dest_V|       pointer|
-|wstrm_TREADY     |  out|    1|        axis|  wstrm_V_dest_V|       pointer|
-|wstrm_TDEST      |   in|    6|        axis|  wstrm_V_dest_V|       pointer|
-|wstrm_TKEEP      |   in|    4|        axis|  wstrm_V_keep_V|       pointer|
-|wstrm_TSTRB      |   in|    4|        axis|  wstrm_V_strb_V|       pointer|
-|wstrm_TUSER      |   in|    2|        axis|  wstrm_V_user_V|       pointer|
-|wstrm_TLAST      |   in|    1|        axis|  wstrm_V_last_V|       pointer|
-|wstrm_TID        |   in|    5|        axis|    wstrm_V_id_V|       pointer|
-|depth1_address0  |  out|    4|   ap_memory|          depth1|         array|
-|depth1_ce0       |  out|    1|   ap_memory|          depth1|         array|
-|depth1_we0       |  out|    1|   ap_memory|          depth1|         array|
-|depth1_d0        |  out|   32|   ap_memory|          depth1|         array|
-|point1_address0  |  out|    2|   ap_memory|          point1|         array|
-|point1_ce0       |  out|    1|   ap_memory|          point1|         array|
-|point1_we0       |  out|    1|   ap_memory|          point1|         array|
-|point1_d0        |  out|   32|   ap_memory|          point1|         array|
-|depth2_address0  |  out|    6|   ap_memory|          depth2|         array|
-|depth2_ce0       |  out|    1|   ap_memory|          depth2|         array|
-|depth2_we0       |  out|    1|   ap_memory|          depth2|         array|
-|depth2_d0        |  out|   32|   ap_memory|          depth2|         array|
-|point2_address0  |  out|    6|   ap_memory|          point2|         array|
-|point2_ce0       |  out|    1|   ap_memory|          point2|         array|
-|point2_we0       |  out|    1|   ap_memory|          point2|         array|
-|point2_d0        |  out|   32|   ap_memory|          point2|         array|
-|depth3_address0  |  out|    8|   ap_memory|          depth3|         array|
-|depth3_ce0       |  out|    1|   ap_memory|          depth3|         array|
-|depth3_we0       |  out|    1|   ap_memory|          depth3|         array|
-|depth3_d0        |  out|   32|   ap_memory|          depth3|         array|
-|point3_address0  |  out|    7|   ap_memory|          point3|         array|
-|point3_ce0       |  out|    1|   ap_memory|          point3|         array|
-|point3_we0       |  out|    1|   ap_memory|          point3|         array|
-|point3_d0        |  out|   32|   ap_memory|          point3|         array|
-+-----------------+-----+-----+------------+----------------+--------------+
++--------------------+-----+-----+------------+----------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++--------------------+-----+-----+------------+----------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_continue         |   in|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|     LoadWeights|  return value|
+|wstrm_TDATA         |   in|   32|        axis|  wstrm_V_data_V|       pointer|
+|wstrm_TVALID        |   in|    1|        axis|  wstrm_V_dest_V|       pointer|
+|wstrm_TREADY        |  out|    1|        axis|  wstrm_V_dest_V|       pointer|
+|wstrm_TDEST         |   in|    6|        axis|  wstrm_V_dest_V|       pointer|
+|wstrm_TKEEP         |   in|    4|        axis|  wstrm_V_keep_V|       pointer|
+|wstrm_TSTRB         |   in|    4|        axis|  wstrm_V_strb_V|       pointer|
+|wstrm_TUSER         |   in|    2|        axis|  wstrm_V_user_V|       pointer|
+|wstrm_TLAST         |   in|    1|        axis|  wstrm_V_last_V|       pointer|
+|wstrm_TID           |   in|    5|        axis|    wstrm_V_id_V|       pointer|
+|depth1_address0     |  out|    4|   ap_memory|          depth1|         array|
+|depth1_ce0          |  out|    1|   ap_memory|          depth1|         array|
+|depth1_we0          |  out|    1|   ap_memory|          depth1|         array|
+|depth1_d0           |  out|   32|   ap_memory|          depth1|         array|
+|point1_address0     |  out|    2|   ap_memory|          point1|         array|
+|point1_ce0          |  out|    1|   ap_memory|          point1|         array|
+|point1_we0          |  out|    1|   ap_memory|          point1|         array|
+|point1_d0           |  out|   32|   ap_memory|          point1|         array|
+|depth2_address0     |  out|    6|   ap_memory|          depth2|         array|
+|depth2_ce0          |  out|    1|   ap_memory|          depth2|         array|
+|depth2_we0          |  out|    1|   ap_memory|          depth2|         array|
+|depth2_d0           |  out|   32|   ap_memory|          depth2|         array|
+|point2_0_address0   |  out|    2|   ap_memory|        point2_0|         array|
+|point2_0_ce0        |  out|    1|   ap_memory|        point2_0|         array|
+|point2_0_we0        |  out|    1|   ap_memory|        point2_0|         array|
+|point2_0_d0         |  out|   32|   ap_memory|        point2_0|         array|
+|point2_1_address0   |  out|    2|   ap_memory|        point2_1|         array|
+|point2_1_ce0        |  out|    1|   ap_memory|        point2_1|         array|
+|point2_1_we0        |  out|    1|   ap_memory|        point2_1|         array|
+|point2_1_d0         |  out|   32|   ap_memory|        point2_1|         array|
+|point2_2_address0   |  out|    2|   ap_memory|        point2_2|         array|
+|point2_2_ce0        |  out|    1|   ap_memory|        point2_2|         array|
+|point2_2_we0        |  out|    1|   ap_memory|        point2_2|         array|
+|point2_2_d0         |  out|   32|   ap_memory|        point2_2|         array|
+|point2_3_address0   |  out|    2|   ap_memory|        point2_3|         array|
+|point2_3_ce0        |  out|    1|   ap_memory|        point2_3|         array|
+|point2_3_we0        |  out|    1|   ap_memory|        point2_3|         array|
+|point2_3_d0         |  out|   32|   ap_memory|        point2_3|         array|
+|point2_4_address0   |  out|    2|   ap_memory|        point2_4|         array|
+|point2_4_ce0        |  out|    1|   ap_memory|        point2_4|         array|
+|point2_4_we0        |  out|    1|   ap_memory|        point2_4|         array|
+|point2_4_d0         |  out|   32|   ap_memory|        point2_4|         array|
+|point2_5_address0   |  out|    2|   ap_memory|        point2_5|         array|
+|point2_5_ce0        |  out|    1|   ap_memory|        point2_5|         array|
+|point2_5_we0        |  out|    1|   ap_memory|        point2_5|         array|
+|point2_5_d0         |  out|   32|   ap_memory|        point2_5|         array|
+|point2_6_address0   |  out|    2|   ap_memory|        point2_6|         array|
+|point2_6_ce0        |  out|    1|   ap_memory|        point2_6|         array|
+|point2_6_we0        |  out|    1|   ap_memory|        point2_6|         array|
+|point2_6_d0         |  out|   32|   ap_memory|        point2_6|         array|
+|point2_7_address0   |  out|    2|   ap_memory|        point2_7|         array|
+|point2_7_ce0        |  out|    1|   ap_memory|        point2_7|         array|
+|point2_7_we0        |  out|    1|   ap_memory|        point2_7|         array|
+|point2_7_d0         |  out|   32|   ap_memory|        point2_7|         array|
+|point2_8_address0   |  out|    2|   ap_memory|        point2_8|         array|
+|point2_8_ce0        |  out|    1|   ap_memory|        point2_8|         array|
+|point2_8_we0        |  out|    1|   ap_memory|        point2_8|         array|
+|point2_8_d0         |  out|   32|   ap_memory|        point2_8|         array|
+|point2_9_address0   |  out|    2|   ap_memory|        point2_9|         array|
+|point2_9_ce0        |  out|    1|   ap_memory|        point2_9|         array|
+|point2_9_we0        |  out|    1|   ap_memory|        point2_9|         array|
+|point2_9_d0         |  out|   32|   ap_memory|        point2_9|         array|
+|point2_10_address0  |  out|    2|   ap_memory|       point2_10|         array|
+|point2_10_ce0       |  out|    1|   ap_memory|       point2_10|         array|
+|point2_10_we0       |  out|    1|   ap_memory|       point2_10|         array|
+|point2_10_d0        |  out|   32|   ap_memory|       point2_10|         array|
+|point2_11_address0  |  out|    2|   ap_memory|       point2_11|         array|
+|point2_11_ce0       |  out|    1|   ap_memory|       point2_11|         array|
+|point2_11_we0       |  out|    1|   ap_memory|       point2_11|         array|
+|point2_11_d0        |  out|   32|   ap_memory|       point2_11|         array|
+|point2_12_address0  |  out|    2|   ap_memory|       point2_12|         array|
+|point2_12_ce0       |  out|    1|   ap_memory|       point2_12|         array|
+|point2_12_we0       |  out|    1|   ap_memory|       point2_12|         array|
+|point2_12_d0        |  out|   32|   ap_memory|       point2_12|         array|
+|depth3_0_address0   |  out|    5|   ap_memory|        depth3_0|         array|
+|depth3_0_ce0        |  out|    1|   ap_memory|        depth3_0|         array|
+|depth3_0_we0        |  out|    1|   ap_memory|        depth3_0|         array|
+|depth3_0_d0         |  out|   32|   ap_memory|        depth3_0|         array|
+|depth3_1_address0   |  out|    5|   ap_memory|        depth3_1|         array|
+|depth3_1_ce0        |  out|    1|   ap_memory|        depth3_1|         array|
+|depth3_1_we0        |  out|    1|   ap_memory|        depth3_1|         array|
+|depth3_1_d0         |  out|   32|   ap_memory|        depth3_1|         array|
+|depth3_2_address0   |  out|    5|   ap_memory|        depth3_2|         array|
+|depth3_2_ce0        |  out|    1|   ap_memory|        depth3_2|         array|
+|depth3_2_we0        |  out|    1|   ap_memory|        depth3_2|         array|
+|depth3_2_d0         |  out|   32|   ap_memory|        depth3_2|         array|
+|depth3_3_address0   |  out|    5|   ap_memory|        depth3_3|         array|
+|depth3_3_ce0        |  out|    1|   ap_memory|        depth3_3|         array|
+|depth3_3_we0        |  out|    1|   ap_memory|        depth3_3|         array|
+|depth3_3_d0         |  out|   32|   ap_memory|        depth3_3|         array|
+|depth3_4_address0   |  out|    5|   ap_memory|        depth3_4|         array|
+|depth3_4_ce0        |  out|    1|   ap_memory|        depth3_4|         array|
+|depth3_4_we0        |  out|    1|   ap_memory|        depth3_4|         array|
+|depth3_4_d0         |  out|   32|   ap_memory|        depth3_4|         array|
+|depth3_5_address0   |  out|    5|   ap_memory|        depth3_5|         array|
+|depth3_5_ce0        |  out|    1|   ap_memory|        depth3_5|         array|
+|depth3_5_we0        |  out|    1|   ap_memory|        depth3_5|         array|
+|depth3_5_d0         |  out|   32|   ap_memory|        depth3_5|         array|
+|depth3_6_address0   |  out|    5|   ap_memory|        depth3_6|         array|
+|depth3_6_ce0        |  out|    1|   ap_memory|        depth3_6|         array|
+|depth3_6_we0        |  out|    1|   ap_memory|        depth3_6|         array|
+|depth3_6_d0         |  out|   32|   ap_memory|        depth3_6|         array|
+|depth3_7_address0   |  out|    5|   ap_memory|        depth3_7|         array|
+|depth3_7_ce0        |  out|    1|   ap_memory|        depth3_7|         array|
+|depth3_7_we0        |  out|    1|   ap_memory|        depth3_7|         array|
+|depth3_7_d0         |  out|   32|   ap_memory|        depth3_7|         array|
+|point3_0_address0   |  out|    4|   ap_memory|        point3_0|         array|
+|point3_0_ce0        |  out|    1|   ap_memory|        point3_0|         array|
+|point3_0_we0        |  out|    1|   ap_memory|        point3_0|         array|
+|point3_0_d0         |  out|   32|   ap_memory|        point3_0|         array|
+|point3_1_address0   |  out|    4|   ap_memory|        point3_1|         array|
+|point3_1_ce0        |  out|    1|   ap_memory|        point3_1|         array|
+|point3_1_we0        |  out|    1|   ap_memory|        point3_1|         array|
+|point3_1_d0         |  out|   32|   ap_memory|        point3_1|         array|
+|point3_2_address0   |  out|    4|   ap_memory|        point3_2|         array|
+|point3_2_ce0        |  out|    1|   ap_memory|        point3_2|         array|
+|point3_2_we0        |  out|    1|   ap_memory|        point3_2|         array|
+|point3_2_d0         |  out|   32|   ap_memory|        point3_2|         array|
+|point3_3_address0   |  out|    4|   ap_memory|        point3_3|         array|
+|point3_3_ce0        |  out|    1|   ap_memory|        point3_3|         array|
+|point3_3_we0        |  out|    1|   ap_memory|        point3_3|         array|
+|point3_3_d0         |  out|   32|   ap_memory|        point3_3|         array|
+|point3_4_address0   |  out|    4|   ap_memory|        point3_4|         array|
+|point3_4_ce0        |  out|    1|   ap_memory|        point3_4|         array|
+|point3_4_we0        |  out|    1|   ap_memory|        point3_4|         array|
+|point3_4_d0         |  out|   32|   ap_memory|        point3_4|         array|
+|point3_5_address0   |  out|    4|   ap_memory|        point3_5|         array|
+|point3_5_ce0        |  out|    1|   ap_memory|        point3_5|         array|
+|point3_5_we0        |  out|    1|   ap_memory|        point3_5|         array|
+|point3_5_d0         |  out|   32|   ap_memory|        point3_5|         array|
+|point3_6_address0   |  out|    4|   ap_memory|        point3_6|         array|
+|point3_6_ce0        |  out|    1|   ap_memory|        point3_6|         array|
+|point3_6_we0        |  out|    1|   ap_memory|        point3_6|         array|
+|point3_6_d0         |  out|   32|   ap_memory|        point3_6|         array|
+|point3_7_address0   |  out|    4|   ap_memory|        point3_7|         array|
+|point3_7_ce0        |  out|    1|   ap_memory|        point3_7|         array|
+|point3_7_we0        |  out|    1|   ap_memory|        point3_7|         array|
+|point3_7_d0         |  out|   32|   ap_memory|        point3_7|         array|
+|point3_8_address0   |  out|    4|   ap_memory|        point3_8|         array|
+|point3_8_ce0        |  out|    1|   ap_memory|        point3_8|         array|
+|point3_8_we0        |  out|    1|   ap_memory|        point3_8|         array|
+|point3_8_d0         |  out|   32|   ap_memory|        point3_8|         array|
+|point3_9_address0   |  out|    4|   ap_memory|        point3_9|         array|
+|point3_9_ce0        |  out|    1|   ap_memory|        point3_9|         array|
+|point3_9_we0        |  out|    1|   ap_memory|        point3_9|         array|
+|point3_9_d0         |  out|   32|   ap_memory|        point3_9|         array|
+|point3_10_address0  |  out|    4|   ap_memory|       point3_10|         array|
+|point3_10_ce0       |  out|    1|   ap_memory|       point3_10|         array|
+|point3_10_we0       |  out|    1|   ap_memory|       point3_10|         array|
+|point3_10_d0        |  out|   32|   ap_memory|       point3_10|         array|
++--------------------+-----+-----+------------+----------------+--------------+
 
