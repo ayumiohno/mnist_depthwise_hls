@@ -20,7 +20,7 @@ Vitis HLS Implementation of MNIST Handwritten Digit Classification
     | point3 | 10 | 1 | 1 | 1 |
 
 ## Training
-- training code: [MNIST_train.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/MNIST_train.ipynb)
+- training code: [MNIST_train.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/notebooks/MNIST_train.ipynb)
 - trained model and weights:
     - torch model: [model.pth](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/data/model.pth) 
     - weights only: [params.json](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/data/params.json)
@@ -38,14 +38,15 @@ Vitis HLS Implementation of MNIST Handwritten Digit Classification
 - Follow the hardware design steps outlined in <https://blog.n-hassy.info/2021/05/vitis-hls-to-fpga-3/>.
     - Note that we need one more DMA IP.
 - Install PYNQ on the KV260.
-- Run [MNIST_fpga.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/MNIST_.fpgaipynb) on PYNQ.
+- Run [MNIST_fpga.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/notebooks/MNIST_fpga.ipynb) on PYNQ.
 
 ## Results
 - Synthesis Summary Report: [csynth.rpt](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/solution1/syn/report/csynth.rpt)
-- I compared the results with PyTorch (CPU) on PYNQ.
-    - [MNIST_torch.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/MNIST_torch.ipynb)
+- I compared the results with PyTorch (CPU) and full-scratch Python implementation on PYNQ.
+    - [MNIST_torch.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/notebooks/MNIST_torch.ipynb)
+    - [MNIST_scratch.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/notebooks/MNIST_scratch.ipynb)
 - Achieved the same result (accurary of 90.5%) with [images.json](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/data/images.json) and [labels.json](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/data/labels.json)
-- 3 times faster than Pytorch on PYNQ. 
-    | | FPGA | PyTorch |
-    | ---- | ---- | ---- |
-    | time (ms/picture) | 0.88  | 2.90 |
+- **3.3** times faster than Pytorch on PYNQ. **530** times fater than a full-scratch Python implementation on PYNQ. 
+    | | FPGA | PyTorch | Scratch(Python) |
+    | ---- | ---- | ---- | ---- |
+    | time (ms/picture) | 0.88  | 2.90 | 466 |
