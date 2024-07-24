@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="MNIST" xd:componentRef="MNIST" xd:initiationInterval="1297" xd:clockPeriod="10" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="istrm" xd:originalName="istrm" xd:direction="in" xd:interfaceRef="istrm" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="wstrm" xd:originalName="wstrm" xd:direction="in" xd:interfaceRef="wstrm" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:arg xd:name="ostrm" xd:originalName="ostrm" xd:direction="out" xd:interfaceRef="ostrm" xd:busTypeRef="axis" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="1735" xd:worst-case="1735" xd:average-case="1735"/>
+  <xd:resourceEstimates xd:LUT="28244" xd:FF="30761" xd:BRAM="0" xd:DSP="156"/>
+</xd:acceleratorMap>
