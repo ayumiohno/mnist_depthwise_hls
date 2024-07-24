@@ -7,7 +7,9 @@ Vitis HLS Implementation of MNIST Handwritten Digit Classification
 - This model is based on Depthwise Separable Convolution:
     - First, we perform Depthwise Convolution, which involves spatial convolution for each channel.
     - Second, we perform Pointwise Convolution, which involves a weighted sum of the channels for each pixel.
-    ![alt text](assets/image.png)
+
+![alt text](assets/image.png)
+
 - This model consists of three layers of Depthwise Seperatable Convolution.
     || depth | size | kernel size | stride |
     | ---- |---- | ---- | ---- | ---- |
@@ -37,6 +39,8 @@ Vitis HLS Implementation of MNIST Handwritten Digit Classification
 ## Hardware
 - Follow the hardware design steps outlined in <https://blog.n-hassy.info/2021/05/vitis-hls-to-fpga-3/>.
     - Note that we need one more DMA IP.
+    - block design: [block_design.png](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/assets/block_design.png)
+
 - Install PYNQ on the KV260.
 - Run [MNIST_fpga.ipynb](https://github.com/ayumiohno/mnist_depthwise_hls/blob/main/notebooks/MNIST_fpga.ipynb) on PYNQ.
 
